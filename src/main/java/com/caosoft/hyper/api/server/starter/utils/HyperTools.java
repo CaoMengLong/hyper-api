@@ -12,7 +12,7 @@ import java.util.TimeZone;
  * All rights reserved
  *
  * @author 曹梦龙 <138888611@qq.com>
- * @name FLMSTools
+ * @name HyperTools
  * @describe 常用方法集合
  * @create 2018-02-09 10:04
  * **************************************************************

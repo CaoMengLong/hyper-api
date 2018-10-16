@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class IndexController {
-    @RequestMapping(value = "/index/demo",method= RequestMethod.GET)
+    @RequestMapping(value = "/index/demo",method= RequestMethod.POST)
     public HyperResult demo(){
         HyperResult hyperResult = HyperResult.getInstance();
         hyperResult.setParam(1,1,"HyperAPI server is running",null);
