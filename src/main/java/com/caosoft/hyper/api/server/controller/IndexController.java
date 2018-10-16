@@ -7,11 +7,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class IndexController {
-
     @RequestMapping(value = "/index/demo",method= RequestMethod.GET)
     public HyperResult demo(){
         HyperResult hyperResult = HyperResult.getInstance();
-        hyperResult.setParam(0,0,"demo messages",null);
+        hyperResult.setParam(1,1,"HyperAPI server is running",null);
         return hyperResult;
     }
 }
