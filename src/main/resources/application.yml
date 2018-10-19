@@ -1,0 +1,17 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: hyper-api
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.31.218:3306/hyper_api?useSSL=false&autoReconnect=true&useUnicode=true&characterEncoding=utf8
+    username: root
+    password: 123456
+    cachePrepStmts: true  # 开启二级缓存
+
+logging:
+  level:
+    root: WARN
+  level.org.springframework.web: DEBUG
+  level.com.caosoft.*: DEBUG

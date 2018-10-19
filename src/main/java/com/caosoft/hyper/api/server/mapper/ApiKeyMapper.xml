@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.caosoft.hyper.api.server.mapper.ApiKeyMapper">
+  <resultMap id="BaseResultMap" type="com.caosoft.hyper.api.server.po.ApiKey">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="app_name" jdbcType="VARCHAR" property="app_name" />
+    <result column="app_key" jdbcType="VARCHAR" property="app_key" />
+    <result column="security_key" jdbcType="VARCHAR" property="security_key" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="create_time" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="update_time" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, app_name, app_key, security_key, create_time, update_time, status
+  </sql>
+
+  <select id="selectByAppKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from hy_api_key
+    where app_key = #{appkey,jdbcType=VARCHAR}
+  </select>
+
+
+</mapper>

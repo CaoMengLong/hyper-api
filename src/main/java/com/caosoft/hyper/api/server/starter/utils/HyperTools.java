@@ -8,7 +8,7 @@ import java.util.TimeZone;
 
 /**
  * **************************************************************
- * Copyright (c) 2013-2018 扬州鲜生活电子商务有限公司
+ * Copyright (c) 1996-2018 CaoSoft.com
  * All rights reserved
  *
  * @author 曹梦龙 <138888611@qq.com>
