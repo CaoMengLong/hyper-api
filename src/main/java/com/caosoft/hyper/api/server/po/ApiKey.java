@@ -1,8 +1,10 @@
 package com.caosoft.hyper.api.server.po;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class ApiKey {
+public class ApiKey implements Serializable {
+    private static final long serialVersionUID = -3664017036843323724L;
     private Integer id;
 
     private String app_name;

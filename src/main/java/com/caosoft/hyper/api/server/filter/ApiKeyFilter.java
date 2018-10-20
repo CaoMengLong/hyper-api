@@ -53,7 +53,7 @@ public class ApiKeyFilter implements Filter {
 
     //排除URL列表
     private static final Set<String> ALLOWED_PATHS = Collections.unmodifiableSet(new HashSet<>(
-            Arrays.asList("/main/excludefilter", "/logout", "/register")));
+            Arrays.asList("/pay/", "/logout", "/register")));
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
