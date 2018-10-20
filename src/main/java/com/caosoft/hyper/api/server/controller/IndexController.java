@@ -1,6 +1,6 @@
 package com.caosoft.hyper.api.server.controller;
 
-import com.caosoft.hyper.api.server.starter.po.HyperResult;
+import com.caosoft.hyper.api.starter.po.HyperResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;

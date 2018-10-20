@@ -3,7 +3,7 @@ package com.caosoft.hyper.api.server.filter;
 import com.alibaba.fastjson.JSONObject;
 import com.caosoft.hyper.api.server.po.ApiKey;
 import com.caosoft.hyper.api.server.service.impl.ApiKeyServiceImpl;
-import com.caosoft.hyper.api.server.starter.po.HyperResult;
+import com.caosoft.hyper.api.starter.po.HyperResult;
 import org.apache.tomcat.util.codec.binary.Base64;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
