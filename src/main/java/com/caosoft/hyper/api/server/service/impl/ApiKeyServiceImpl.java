@@ -26,7 +26,6 @@ public class ApiKeyServiceImpl implements IApiKeyService {
 
     @Override
     public ApiKey getApiKeyByKey(String appkey) {
-        System.err.println("从数据中进行了查询哦");
         return apiKeyMapper.selectByAppKey(appkey);
     }
 }
