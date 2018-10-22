@@ -13,4 +13,11 @@ public class IndexController {
         hyperResult.setParam(1,1,"HyperAPI server is running",null);
         return hyperResult;
     }
+
+    @RequestMapping(value = "/index/demoForm",method= RequestMethod.POST)
+    public HyperResult demo(String name){
+        HyperResult hyperResult = HyperResult.getInstance();
+        hyperResult.setParam(1,1,"Hello "+name,name);
+        return hyperResult;
+    }
 }

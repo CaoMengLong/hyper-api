@@ -1,9 +1,10 @@
 package com.caosoft.hyper.api.server.filter;
 
-import com.alibaba.fastjson.JSONObject;
+
 import com.caosoft.hyper.api.server.po.ApiKey;
 import com.caosoft.hyper.api.server.service.impl.ApiKeyServiceImpl;
 import com.caosoft.hyper.api.starter.po.HyperResult;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.tomcat.util.codec.binary.Base64;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -94,7 +95,8 @@ public class ApiKeyFilter implements Filter {
             response.setStatus(401);
             HyperResult hyperResult = HyperResult.getInstance();
             hyperResult.setParam(0,-9999,"请求参数appkey，sign，timestamp 可能不存在，调用失败。",null);
-            response.getWriter().write(JSONObject.toJSONString(hyperResult));
+            ObjectMapper mapper = new ObjectMapper();
+            response.getWriter().write(mapper.writeValueAsString(hyperResult));
             return;
         }
 
@@ -105,7 +107,8 @@ public class ApiKeyFilter implements Filter {
             response.setStatus(401);
             HyperResult hyperResult = HyperResult.getInstance();
             hyperResult.setParam(0,-9998,"应用 AppKey 不存在，调用失败。",null);
-            response.getWriter().write(JSONObject.toJSONString(hyperResult));
+            ObjectMapper mapper = new ObjectMapper();
+            response.getWriter().write(mapper.writeValueAsString(hyperResult));
             return;
         }
 
@@ -116,7 +119,8 @@ public class ApiKeyFilter implements Filter {
             response.setStatus(401);
             HyperResult hyperResult = HyperResult.getInstance();
             hyperResult.setParam(0,-9997,"timestamp 请求时间不在服务器允许范围内，调用失败。",null);
-            response.getWriter().write(JSONObject.toJSONString(hyperResult));
+            ObjectMapper mapper = new ObjectMapper();
+            response.getWriter().write(mapper.writeValueAsString(hyperResult));
             return;
         }
 
@@ -161,7 +165,8 @@ public class ApiKeyFilter implements Filter {
             response.setStatus(401);
             HyperResult hyperResult = HyperResult.getInstance();
             hyperResult.setParam(0,-9996,"Sign签名校验失败，调用失败。",null);
-            response.getWriter().write(JSONObject.toJSONString(hyperResult));
+            ObjectMapper mapper = new ObjectMapper();
+            response.getWriter().write(mapper.writeValueAsString(hyperResult));
             return;
         }
 
