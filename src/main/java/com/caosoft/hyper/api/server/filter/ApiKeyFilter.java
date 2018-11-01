@@ -54,7 +54,7 @@ public class ApiKeyFilter implements Filter {
 
     //排除URL列表
     private static final Set<String> ALLOWED_PATHS = Collections.unmodifiableSet(new HashSet<>(
-            Arrays.asList("/pay/", "/logout", "/register")));
+            Arrays.asList("/druid/*","/pay/", "/logout", "/register")));
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
@@ -84,6 +84,15 @@ public class ApiKeyFilter implements Filter {
             //在排除URL中，不进行AppKey鉴权
             filterChain.doFilter(request,response);
             return;
+        }
+
+        for (String value:ALLOWED_PATHS){
+            value = value.replace("*","");
+            if(path.indexOf(value)!=-1){
+                //存在
+                filterChain.doFilter(request,response);
+                return;
+            }
         }
 
         String appkey = request.getParameter("appkey"); //应用的Appkey
