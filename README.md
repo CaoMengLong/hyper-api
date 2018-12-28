@@ -67,7 +67,7 @@ com.caosoft.hyper.api
 │   └── servlet              #Servlet控制类
 └── starter                  #公用类包
     ├── po                   #公用实体类
-        └── HyperResult.java #接口调用数据返回规则约定
+    │   └── HyperResult.java #接口调用数据返回规则约定
     └── utils                #公用工具类
 ```
 
@@ -124,6 +124,8 @@ hyper-api:
 
 3.在客户端代码中配置好请求方式为APIKEY模式，并配置好应用app_key和security_key即可与服务端通信，具体客服端部分的配置，可以查看配套客户端的帮助文档。
  
+ 客户端SDK 已经完成JAVA版本的制作 
+ hyper-api-client-java : https://github.com/CaoMengLong/hyper-api-client-java
 
 ---------
 
