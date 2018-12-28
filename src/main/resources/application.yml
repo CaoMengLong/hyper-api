@@ -7,7 +7,7 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource
     druid:
       driver-class-name: com.mysql.jdbc.Driver
-      url: jdbc:mysql://192.168.31.218:3306/hyper_api?useSSL=false&autoReconnect=true&useUnicode=true&characterEncoding=utf8
+      url: jdbc:mysql://127.0.0.1:3306/hyper_api?useSSL=false&autoReconnect=true&useUnicode=true&characterEncoding=utf8
       username: root
       password: 123456
       # 下面为连接池的补充设置，应用到上面所有数据源中
@@ -35,7 +35,7 @@ spring:
       # 合并多个DruidDataSource的监控数据
       useGlobalDataSourceStat: true
   redis:
-    host: 192.168.31.218
+    host: 127.0.0.1
     port: 6379
     database: 0
     timeout: 60s  # 数据库连接超时时间，2.0 中该参数的类型为Duration，这里在配置的时候需要指明单位
@@ -59,5 +59,5 @@ logging:
 
 
 hyper-api:
-  apikey-filter-enable: true  #是否开启API KEY请求校验
+  apikey-filter-enable: false  #是否开启API KEY请求校验
   apikey-filter-track: true  #是否显示请求校验调试日志
