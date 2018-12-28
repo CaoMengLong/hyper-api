@@ -16,37 +16,37 @@
 
 ### HyperApi 源码使用
 
-#####下载代码
+####下载代码
 ``` bash
 git clone https://github.com/CaoMengLong/hyper-api.git
 ```
 
-#####导入数据库
+####导入数据库
 ``` bash
 hyper_api.sql #导入Mysql数据库
 ```
-#####修改配置文件 application.yml
+####修改配置文件 application.yml
 ``` bash
-   druid:
-      driver-class-name: com.mysql.jdbc.Driver
-      url: jdbc:mysql://127.0.0.1:3306/hyper_api?useSSL=false&autoReconnect=true&useUnicode=true&characterEncoding=utf8
-      username: root
-      password: 123456 #1.修改连接数据库名称和账号密码
+druid:
+  driver-class-name: com.mysql.jdbc.Driver
+  url: jdbc:mysql://127.0.0.1:3306/hyper_api?useSSL=false&autoReconnect=true&useUnicode=true&characterEncoding=utf8
+  username: root
+  password: 123456 #1.修改连接数据库名称和账号密码
  
- redis:
-    host: 127.0.0.1  #2.修改你的Redis地址
+redis:
+  host: 127.0.0.1  #2.修改你的Redis地址
     
 hyper-api:
   apikey-filter-enable: false  #3.是否开启API KEY请求校验  false关闭 true打开
 
 ```
 
-#####运行程序
+####运行程序
 ``` bash
 HyperApiApplication.java  #在IDE中启动项目
 ```
 
-#####调试项目
+####调试项目
 ``` bash
 curl http://127.0.0.1:8080/index/demo -X POST
 #返回以下信息则代表成功。
